@@ -1,11 +1,39 @@
-body{
+*{ /*Implemented on Each and every Object present in HTML*/
+    margin:0;
+    padding: 0;
+}
+
+body{ /*No Implemented every child*/
     color:#444;
     font-family: sans-serif;
-} 
+}
+.container{/*The tenchinque to center all the objects on the webpage*/
+    width: 800px;
+    margin: 0 auto;
+}
 
 
 .main-header{
     background-color: #f7f7f7;
+    padding:20px 40px 20px 40px;
+    margin-bottom: 60px;
+    height: 80px;
+}
+
+article{
+    margin-bottom: 60px;
+}
+
+.post-header{
+    margin-bottom: 40px;
+}
+
+aside{
+    background-color: #f7f7f7;
+    border-top:5px solid #1098ad;
+    border-bottom:5px solid #1098ad;
+    padding:50px 0 50px 0;
+    width: 500px;
 }
 
 
@@ -22,11 +50,14 @@ h1{
 
 h2{
     font-size: 40px;
+    margin-bottom: 30px;
     
 }
 h3{
     font-size: 30px;
     text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
     
 }
 h4{
@@ -38,10 +69,19 @@ h4{
 p{
     font-size: 22px;
     line-height: 1;  /* The space between the line*/
+    margin-bottom: 15px;
 }
+ul,ol{
+    margin-left: 50px;
+    margin-bottom: 20px;
 
+}
 li{
     font-size: 20px;
+    margin-bottom: 10px;
+}
+li:last-child{
+    margin-bottom: 0;
 }
 
 
@@ -59,15 +99,17 @@ li{
     font-weight: bold;
 }
 
+.post-image{
+    width: 100%;
+    height: auto;
+}
+
 .related-posts{
     list-style: none;
 }
 
-aside{
-    background-color: #f7f7f7;
-    border-top:5px solid #1098ad;
-    border-bottom:5px solid #1098ad;
-}
+
+
 
 /* .first-li{
     font-weight: bold;
