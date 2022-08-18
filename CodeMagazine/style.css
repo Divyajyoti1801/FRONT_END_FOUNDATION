@@ -1,3 +1,30 @@
+/*
+  Notes:
+  --- diffchecker.com
+  
+  Block-level Elements: Elements are formatted visulally as blocks
+  Elements occupy 100% of parent element's width, no matter the content
+  Elements are stacked vertically by default, one after another. The Box-Model
+  applies as showed earlier. by default many are block level elements. Since we 
+  if we have to change the inline level element to block level than we use
+  'display: block'.
+
+  Inline-level Elements: Occupies only the space necessary for its content, cause no-line breaks after or before the element heights and widths do not apply. Paddings and margins are applied only horizontally(left & Right).
+  To make element as inline element use 'display: inline'.
+  
+  Inline-Block level Elements: Looks like inline from the outside, behaves like block-level on the inside. Occupies only content's space cause no-line breaks.
+
+  Positioning Mode
+  1. Normal Flow: Default positioning, element is "in-flow", elements are simply laid out according to their order in the HTML code. 'postion: relative'.
+  
+  2. Absolute Positioning: Elements is removed from the normal flow: "Out Of Flow", No impact on surrounding element, might overlap them.'Postion: absolute'.
+
+  Pseduo Element:
+  1. element:after - Used for costmetic styling no new content added to html
+
+
+*/
+
 *{ /*Implemented on Each and every Object present in HTML*/
     margin:0;
     padding: 0;
@@ -6,10 +33,12 @@
 body{ /*No Implemented every child*/
     color:#444;
     font-family: sans-serif;
+    
 }
 .container{/*The tenchinque to center all the objects on the webpage*/
     width: 800px;
     margin: 0 auto;
+    
 }
 
 
@@ -18,6 +47,7 @@ body{ /*No Implemented every child*/
     padding:20px 40px 20px 40px;
     margin-bottom: 60px;
     height: 80px;
+    
 }
 
 article{
@@ -26,6 +56,7 @@ article{
 
 .post-header{
     margin-bottom: 40px;
+    position: relative;
 }
 
 aside{
@@ -38,7 +69,7 @@ aside{
 
 
 
-h1,h2,h3{
+h1,h2,h3{ /*Block level element that acquire more space then there content*/
     color:#1098ad;
 }
 
@@ -51,8 +82,9 @@ h1{
 h2{
     font-size: 40px;
     margin-bottom: 30px;
-    
+    position: relative;
 }
+
 h3{
     font-size: 30px;
     text-align: center;
@@ -78,7 +110,8 @@ ul,ol{
 }
 li{
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
+    /* display: inline; */
 }
 li:last-child{
     margin-bottom: 0;
@@ -99,7 +132,7 @@ li:last-child{
     font-weight: bold;
 }
 
-.post-image{
+.post-image{ /*Inline-Block Content that only cover size of there content*/
     width: 100%;
     height: auto;
 }
@@ -139,6 +172,77 @@ a:active{
     background-color: black;
     font-style: italic;
 }
+
+nav a:link{ /*inline-content*/
+    /* background-color:orangered;
+    margin:20px;
+    padding:20px;
+    display: block; */
+    margin-right: 30px;
+    margin-top:10px;
+    display:inline-block;
+}
+
+nav a:link:last-child{
+    margin-right:0;
+}
+
+/*---- Absolute Positioning ----*/
+button{
+    cursor: pointer;
+    font-size: 22px;
+    padding: 20px;
+    position: absolute;
+    bottom:50px;
+    right:50px;
+}
+
+/*----  Psedo Elements  -----*/
+
+h1::first-letter{
+     font-style: normal;
+     margin-right: 5px;
+}
+
+h2::first-letter{
+    font-size: 80px;
+}
+
+p::first-line{
+    color:rgb(62, 143, 116);
+}
+
+/* Adjacent-Sibling selector */
+/* h3 + p::first-line{
+    color: aquamarine;
+} */
+
+h2::after{
+    content:'TOP';
+    background-color: aqua;
+    color:black;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 10px;
+    position:absolute;
+    top: -10px;
+    right: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 
