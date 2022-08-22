@@ -28,6 +28,7 @@
 *{ /*Implemented on Each and every Object present in HTML*/
     margin:0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{ /*No Implemented every child*/
@@ -63,8 +64,7 @@ aside{
     background-color: #f7f7f7;
     border-top:5px solid #1098ad;
     border-bottom:5px solid #1098ad;
-    padding:50px 0 50px 0;
-    width: 500px;
+    padding:50px 40px;
 }
 
 
@@ -96,6 +96,7 @@ h4{
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 p{
@@ -139,11 +140,8 @@ li:last-child{
 
 .related-posts{
     list-style: none;
+    margin: 0;
 }
-
-
-
-
 /* .first-li{
     font-weight: bold;
 } */
@@ -230,11 +228,46 @@ h2::after{
     right: -10px;
 }
 
+/* FLOATS */
+ /* .author-image{
+    float: left; 
+    margin-bottom: 20px;
+}
+/* floats make element dependent from parent elements and effect*/ /*surrounding element
+.author{
+    margin-top: 10px;
+    float: left;
+    margin-left: 20px;
+}
+h1{
+    float:left;
+}
+nav{
+    float: right;
+}
 
+.clearfix::after{
+    clear:both;
+    content:"";
+    display: block;
+} */
 
+/* article{
+    background-color: plum;
+    width: 900px;
+    float: left;
+}
 
+aside{
+    background-color: aquamarine;
+    width: 300px;
+    float: right;
+}
 
-
+footer{
+    background-color: darkcyan;
+    clear:both;
+} */
 
 
 
