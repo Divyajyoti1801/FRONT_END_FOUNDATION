@@ -45,14 +45,14 @@ body{ /*No Implemented every child*/
 .main-header{
     background-color: #f7f7f7;
     padding:20px 40px 20px 40px;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
     height: 80px;
     width: 100%;
     
 }
 
 article{
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
 }
 
 .post-header{
@@ -231,8 +231,37 @@ h2::after{
     right: -10px;
 }
 
-/*------ Adding Flex to the Project ------*/
+/* Adding CSS Grid to the project -----*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    column-gap: 75px;
+    row-gap: 60px;
+    align-items: start;
+}
+
 .main-header{
+    grid-column: 1/-1;
+}
+
+article{
+
+}
+
+aside{
+
+}
+
+footer{
+    grid-column: 1/-1;
+}
+
+
+
+
+
+/*------ Adding Flex to the Project ------*/
+/* .main-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -265,14 +294,17 @@ h2::after{
 
 .row{
     display: flex;
+    align-items: flex-start;
     gap:100px;
+    margin-bottom: 60px;
 }
 article{
-    flex:0 0 875px;
+    flex:1;
+    margin-bottom: 0;
 }
 aside{
     flex:0 0 350px;
-}
+} */
 
 
 
