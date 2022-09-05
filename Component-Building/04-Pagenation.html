@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>04-Pagenation</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        font-family: "Inter",sans-serif;
+        color:#343a40;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .pagenation{
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:16px;
+        height: 50px;
+        position: relative;
+    }
+    .btn-num{
+        background: none;
+        height: 30px;
+        width: 30px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+    .btn-num:hover{
+        background-color: #087f5b;
+        color: #fff;
+        border-radius: 50%;
+    }
+    .arrow{
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        background-color: #fff;
+        color: #38d9a9;
+        border-radius: 50%;
+        border-color: #38d9a9;
+        cursor: pointer;
+    }
+    .arrow--left{
+        left: 0;
+        transform: translate(-150%);
+    }
+    .arrow--right{
+        right: 0;
+        transform: translate(150%);
+    }
+</style>
+<body>
+    <div class="pagenation">
+        <button class="btn-num">1</button>
+        <button class="btn-num">2</button>
+        <button class="btn-num">3</button>
+        <button class="btn-num">4</button>
+        <button class="btn-num">5</button>
+        <button class="btn-num">6</button>
+        <button class="btn-num">...</button>
+        <button class="btn-num">23</button>
+
+
+        <button class="arrow arrow--left">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+
+        </button>
+        <button class="arrow arrow--right">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
+    </div>
+    
+</body>
+</html>
