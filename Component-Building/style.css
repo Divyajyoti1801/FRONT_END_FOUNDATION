@@ -1,0 +1,81 @@
+/*--- Default Styling Applied on Whole Page ---*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: sans-serif;
+    color:#fff;
+    font-size: 1.5rem;
+    height: 100vh;
+    text-align: center;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 5rem 25rem 1fr 15.625rem; /*Number of Columns*/
+    grid-template-rows: 5rem 1fr; /*Number of Rows*/
+}
+
+/*--- Componenet Designing ---*/
+nav,section,main,aside{
+    padding-top: 1.5rem;
+}
+/*--- 1. Navigation Section ---*/
+nav{
+    background-color: #343a40;
+    /* -1 Sepecify the end of row/column */
+    grid-row: 1/-1;
+}
+/*--- 2. Menu Section ---*/
+menu{
+    background-color: #7048e8;
+    color:#fff;
+    grid-column: 2/-1; 
+    display: flex;
+    align-items: center;
+    gap:0.75rem;
+    padding: 0 2.5rem;
+}
+
+button{
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #5f3dc4;
+    color:#fff;
+    border: none;
+    cursor:pointer;
+    padding: 8px 12px;
+}
+button:last-child{
+    background-color: #d6336c;
+    margin-left: auto;
+}
+
+
+/*--- 3. Section ---*/
+section{
+    background-color: #f1f3f5;
+    padding: 2.5rem;
+    overflow: scroll; /*How element don't appear in viewport height reaction*/
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.email{
+    background-color: #adb5bd;
+    color:#343a40;
+    height: 6rem;
+    display: flex;
+    flex-shrink: 0; /* Not a part of FlexBox Concept */
+    align-items: center;
+    justify-content: center;
+}
+/*---  4. Aside Section ---*/
+aside{
+    background-color: #f1f3f5;
+    color: #343a40;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
