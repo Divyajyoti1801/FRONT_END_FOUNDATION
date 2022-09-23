@@ -6,6 +6,7 @@
   background-color: #fdf2e9;
   height: 9.6rem; /* Because we wanted to make it sticky*/
   padding: 0 4.8rem;
+  position: relative;
 }
 .logo {
   height: 2.2rem;
@@ -42,9 +43,20 @@
   background-color: #cf711f;
 }
 .btn-mobile-nav{
-
+  border:none;
+  background: none;
+  cursor: pointer;
+  display: none;
 }
-.
+.icon-mobile-nav{
+  height: 4.8rem;
+  width:4.8rem;
+  color:#333;
+}
+/* There is a new type of selector which will come select on the basis of name */
+.icon-mobile-nav[name="close-outline"]{
+  display:none;
+}
 /**********************************************************/
 /*-----------------------------------------------*/
 /*-------------- CSS of HERO-SECTION ------------*/
