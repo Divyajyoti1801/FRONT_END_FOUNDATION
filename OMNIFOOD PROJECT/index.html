@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HTML/CSS: Major Course Project">
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css">
+    <link rel="icon" href="img/favicon-resize.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="mainfest" href="manifest.webmanifest">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <title>OmniFood</title>
+    <title>OmniFood &mdash; Never cook again</title>
   </head>
   <body>
     <!-- A Consistent Practice is to select element only through classes-->
@@ -21,11 +25,11 @@
       <nav class="main-nav">
         <!-- Another symentic Tag -->
         <ul class="main-nav-list">
-          <li><a href="#" class="main-nav-link">How it works</a></li>
-          <li><a href="#" class="main-nav-link">Meals</a></li>
-          <li><a href="#" class="main-nav-link">Testimonials</a></li>
-          <li><a href="#" class="main-nav-link">Pricing</a></li>
-          <li><a href="#" class="main-nav-link nav-cta">Try for free</a></li>
+          <li><a href="#how" class="main-nav-link">How it works</a></li>
+          <li><a href="#meals" class="main-nav-link">Meals</a></li>
+          <li><a href="#testimonials" class="main-nav-link">Testimonials</a></li>
+          <li><a href="#pricing" class="main-nav-link">Pricing</a></li>
+          <li><a href="#cta" class="main-nav-link nav-cta">Try for free</a></li>
         </ul>
       </nav>
       <button class="btn-mobile-nav">
@@ -47,9 +51,9 @@
             eat healthy again. Tailored to your personal tastes and
             nutritional needs.
           </p>
-          <a href="#" class="btn btn--full margin-right-sm">
+          <a href="#cta" class="btn btn--full margin-right-sm">
           Start eating well</a>
-          <a href="#" class="btn btn--outline">Learn more &darr;</a>
+          <a href="#how" class="btn btn--outline">Learn more &darr;</a>
           <div class="delivered-meals">
             <div class="delivered-imgs">
               <img src="img/customers/customer-1.jpg" alt="CustomerPhoto" />
@@ -65,11 +69,15 @@
           </div>
           </div>
           <div class="hero-img-box">
-            <img
+            <picture>
+              <source srcset="img/hero.png" type="image/png">
+              <img
               src="img/hero.png"
               alt="Food on the table, Delicious Launch Box and Women eating food Deliciously"
               class="hero-img"
             />
+            </picture>
+            
           </div>
         </div>
       </section>
@@ -89,7 +97,7 @@
       </section>
       <!-- End of Featured-In Section -->
       <!-- Start of How It Works Section -->
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <!-- Heading part of the section-->
           <span class="subheading">How it works</span>
@@ -160,7 +168,7 @@
       </section>
       <!-- End of How It Works Section -->
       <!-- Start of Meals Section -->
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">Omnifood AI chooses from 5,000+ recipes</h2>
@@ -218,7 +226,7 @@
       </section>
       <!-- End of Meals Section -->
       <!-- Start of Testimonials Section -->
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testimonials">
         <div class="testimonials-container">
 
           <span class="subheading">Testimonials</span>
@@ -288,7 +296,7 @@
       </section>
       <!-- End of Testimonial Section  -->
       <!-- Start of Pricing Section -->
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span class="subheading">Pricing</span>
           <h2 class="heading-secondary">
@@ -381,24 +389,24 @@
       </section>
       <!-- End of Pricing Section -->
       <!-- Start of Call-to-action -->
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
               <h2 class="heading-secondary">Get your first meal for free</h2>
               <p class="cta-text">Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!</p>
-              <form class="cta-form" action="#">
+              <form class="cta-form" name="sign-up" netlify>
                 <div>
                   <label for="name"  >Full Name</label>
-                  <input type="text" id="name" placeholder="Divyajyoti" required>
+                  <input type="text" id="name" name="full-name" placeholder="Divyajyoti" required>
                 </div>
                 <div>
                   <label for="email">Email Address</label>
-                  <input type="email"  id="email" placeholder="me@example.com" required>
+                  <input type="email"  id="email" name="email"placeholder="me@example.com" required>
                 </div>
                 <div>
                   <label for="select-where">Where you hear about us ?</label>
-                  <select id="select-where" required>
+                  <select name="selet-where" id="select-where" required>
                     <option value="">Please choose one option:</option>
                     <option value="Friends">Friends & Family</option>
                     <option value="Youtube">Youtube</option>
@@ -428,7 +436,7 @@
             <li><a href="#" class="footer-link"><ion-icon name="logo-facebook" class="social-icon"></ion-icon></a></li>
             <li><a href="#" class="footer-link"><ion-icon name="logo-twitter" class="social-icon"></ion-icon></a></li>
           </ul>
-          <p class="copyright">Copyright &copy; 2027 by OmniFood Inc. All rights reserved.</p>
+          <p class="copyright">Copyright &copy; <span class="year">2027</span> by OmniFood Inc. All rights reserved.</p>
         </div>
         <div class="address-col">
           <p class="footer-heading">Contact us</p>
